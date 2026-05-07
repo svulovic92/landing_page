@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Memento - Digital Heirloom</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600&amp;family=Be+Vietnam+Pro:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface-variant": "#534340",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fec1ab",
+                    "on-primary-fixed": "#3a0a05",
+                    "primary-container": "#a65d52",
+                    "on-primary-container": "#fff5f3",
+                    "surface": "#fbf9f4",
+                    "surface-bright": "#fbf9f4",
+                    "secondary-fixed-dim": "#f5b9a3",
+                    "secondary-fixed": "#ffdbce",
+                    "tertiary": "#4f5d46",
+                    "on-tertiary-fixed": "#131f0d",
+                    "outline": "#867370",
+                    "on-secondary-container": "#7a4d3c",
+                    "on-primary-fixed-variant": "#72342b",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f5f3ee",
+                    "tertiary-fixed": "#d8e8ca",
+                    "background": "#fbf9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#321206",
+                    "primary": "#89453b",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "on-tertiary-fixed-variant": "#3d4b35",
+                    "surface-tint": "#8f4b41",
+                    "surface-container-high": "#eae8e3",
+                    "surface-container": "#f0eee9",
+                    "on-secondary-fixed-variant": "#663c2c",
+                    "on-tertiary-container": "#edfddf",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-primary": "#ffffff",
+                    "secondary": "#815342",
+                    "inverse-surface": "#30312e",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "on-surface": "#1b1c19",
+                    "surface-variant": "#e4e2dd",
+                    "inverse-primary": "#ffb4a8",
+                    "inverse-on-surface": "#f2f1ec",
+                    "tertiary-fixed-dim": "#bccbaf",
+                    "tertiary-container": "#67765e",
+                    "primary-fixed": "#ffdad4",
+                    "outline-variant": "#d9c1be",
+                    "surface-dim": "#dbdad5",
+                    "on-background": "#1b1c19",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "2xl": "48px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "margin-mobile": "20px",
+                    "gutter": "16px",
+                    "xl": "32px",
+                    "unit": "4px",
+                    "lg": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "h3": ["Noto Serif"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "h1": ["Noto Serif"],
+                    "caption": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "h2": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "h1": ["34px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "32px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-low text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md transition-all duration-300">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-lg py-sm flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-h1 text-h1 text-primary font-semibold tracking-tight">Memento</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+</div>
+<button class="md:hidden text-on-surface-variant p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-24 md:pt-48 md:pb-32 px-margin-mobile md:px-lg max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24">
+<div class="flex-1 space-y-8 text-center md:text-left z-10">
+<h1 class="font-h1 text-4xl md:text-5xl lg:text-6xl text-on-background leading-tight">Turn every gift into a lasting memory.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto md:mx-0">Memento helps you log, organize, and treasure the stories behind the gifts you receive. A digital heirloom for your most cherished moments.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+<button class="text-primary font-label-md text-label-md px-8 py-4 rounded-full hover:bg-secondary-container/30 transition-all flex items-center justify-center gap-2">
+                    Learn More
+                </button>
+</div>
+</div>
+<div class="flex-1 relative w-full max-w-md md:max-w-none">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-3xl -z-10 transform translate-x-10 translate-y-10"></div>
+<img alt="Hero Image" class="w-full h-auto rounded-3xl shadow-xl shadow-primary/10 object-cover aspect-[4/5] transform -rotate-2 hover:rotate-0 transition-transform duration-700 ease-out border-8 border-surface-container-lowest" data-alt="A beautifully styled flat lay of a linen-bound journal, a vintage camera, and scattered polaroid photos on a soft beige surface. Warm, natural sunlight casts gentle shadows, creating a nostalgic and sentimental mood. The aesthetic is clean, modern, and deeply personal, emphasizing organic textures and a sophisticated tactile quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPiZ7Kz28i20hfz6pBEuPcHlq9KYZOjABkG0Yxvc28owLW_FEROPHBLYozO0e0lUTtii2PkdVQVaLHWLLdijeUISQXRz0K2mBAcsqCEKnRaGmGzfUJN0Z-ke9fVof7V1azY9tjLPCNQsQQQYKY8ak1yGAhyRv3Tx1S0vv-j5iQFcwqPpDrsPb21dT7MuLm4Kj7uYP1lwnmWBn4z0L6YylJKaXB_UZWruoaX3arSpCfjErC5fGSs0vrYICH_iqZEWTTAr9xRAtaRVo"/>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-24 bg-surface px-margin-mobile md:px-lg" id="features">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="text-center max-w-2xl mx-auto space-y-4">
+<h2 class="font-h1 text-3xl md:text-4xl text-on-background">Curate Your Life's Stories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">More than just a list, Memento is a thoughtful space designed to honor the intentions behind every gift.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-[32px] shadow-[0_8px_24px_rgba(137,69,59,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-surface-container/50 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-bl-[64px] -z-10 transition-transform group-hover:scale-110"></div>
+<div class="w-16 h-16 bg-primary-container/20 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">photo_camera</span>
+</div>
+<h3 class="font-h2 text-h2 text-on-background mb-3">Capture the Moment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Log gifts with photos, personal notes, and the emotions felt in that exact second. A true digital scrapbook.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-[32px] shadow-[0_8px_24px_rgba(137,69,59,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-surface-container/50 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-bl-[64px] -z-10 transition-transform group-hover:scale-110"></div>
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">group</span>
+</div>
+<h3 class="font-h2 text-h2 text-on-background mb-3">Remember the People</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Keep a beautiful, chronological timeline of memories and exchanges for every loved one in your life.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-[32px] shadow-[0_8px_24px_rgba(137,69,59,0.04)] hover:-translate-y-2 transition-transform duration-300 border border-surface-container/50 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-container/10 rounded-bl-[64px] -z-10 transition-transform group-hover:scale-110"></div>
+<div class="w-16 h-16 bg-tertiary/10 rounded-2xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">event_note</span>
+</div>
+<h3 class="font-h2 text-h2 text-on-background mb-3">Celebrate Occasions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Never miss a milestone. Organize your life's treasures by events, anniversaries, and special days.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 px-margin-mobile md:px-lg relative overflow-hidden" id="gallery">
+<div class="absolute inset-0 bg-secondary-container/10 -skew-y-3 transform origin-top-left -z-10"></div>
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+<h2 class="font-h1 text-3xl md:text-4xl text-on-background">A digital scrapbook for your life's treasures</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Designed with the warmth and intentionality of a physical journal, built for your modern life.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+<!-- Mockup 1 -->
+<div class="relative group">
+<div class="absolute inset-0 bg-primary-container/20 rounded-[40px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="App Screen Mockup 1" class="relative z-10 w-full h-auto rounded-[40px] shadow-[0_20px_40px_rgba(137,69,59,0.08)] border-8 border-surface-container-lowest transform group-hover:-translate-y-2 transition-transform duration-500" data-alt="A clean, minimalist mobile app interface displayed on a sleek smartphone screen, resting on a softly textured linen fabric. The app shows a warm, journal-style feed of photos and notes. The lighting is bright and airy, highlighting the organic curves of the UI and the subtle shadows cast by the device. The color palette features soft off-whites and warm terracotta accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGUNWjV8xqhPaVJIWKn3M81ZHneeEfhJSW41W5GAFdp1A0eOZSAClPDhGNsi5tgeVbwY1ox1_YuqldD1KCR8pK4Gc2uyKlcHsLqqCp72AshqlKXSVfnVseb2ck64iDINgaIoJO3VbmLJcBM5lpJIeh_lcYXO3cZsxLBh_6FMSJpH7-Oa44pNfc_f9oPLLhR0iGEpgPkaR4ey4gEIfjxUcxdCHU0kVCgkSRDugP88bkpuB2hfD7-qHy_695rTyboKO70W4efAU6myY"/>
+</div>
+<!-- Mockup 2 (Offset) -->
+<div class="relative group md:-translate-y-12">
+<div class="absolute inset-0 bg-secondary-container/30 rounded-[40px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="App Screen Mockup 2" class="relative z-10 w-full h-auto rounded-[40px] shadow-[0_20px_40px_rgba(137,69,59,0.08)] border-8 border-surface-container-lowest transform group-hover:-translate-y-2 transition-transform duration-500" data-alt="A close-up view of a beautifully designed mobile app screen showing a detailed memory entry with a large, soft-edged photo of a gift, a date written in a classic serif font, and a personal note below. The screen is held by a hand in a bright, sunlit room, conveying a sense of personal connection and nostalgia. The overall aesthetic is calm, uncluttered, and highly tactile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArhjM4HtpAgHblhoqIeLBNxD3rfzkD0YpImtY4l5kuvlDAhYs-X1w_rLgQeG1IvbpXeNSqhppH8G6Zk14qW6ZlxU600d4OPAvoIQYQ4keBxPxfr7WjzF7i1I4bcsQ_oevaV6aaswHcfOkYKvi1-sTqEWwGHSFXt6Q76uoLzElOPqOd8otHDo8kRabXlyc6iLLcRe8ORZhN6i1Ivcsx6KEpOHzCRgmliU3ktsj7X-SiQdS9Y13Ywf4n-VsKduNOO3V3tPkYdcZPUk0"/>
+</div>
+<!-- Mockup 3 -->
+<div class="relative group lg:mt-0 md:mt-12">
+<div class="absolute inset-0 bg-tertiary-container/20 rounded-[40px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<img alt="App Screen Mockup 3" class="relative z-10 w-full h-auto rounded-[40px] shadow-[0_20px_40px_rgba(137,69,59,0.08)] border-8 border-surface-container-lowest transform group-hover:-translate-y-2 transition-transform duration-500" data-alt="A mobile phone displaying a user profile screen within a memory-keeping app, laid flat next to a cup of tea and a scattered collection of physical photographs. The app UI features rounded 'bento-box' style widgets and soft pastel tags. The composition suggests a quiet afternoon of reflecting on memories, lit by soft, diffused window light. The vibe is modern, warm, and sentimental." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2JZlI_4vIrz_q-iguHk-IGg-la9ReNPZgFdDUU4ICps3nep359vseH1cSxyy81-znp4YwccQBlvNcNy_Cy-cg6KtROW24jzAagnF5ojyWJn7eRYGnWRebZi3DBrQXphQPobaWBbSV2w1gR-uqw9eTQ0x34OP8DnwRnXKPksF7aFB17J5dfZaVB6jcEmVc-P781-qkgf_buBVF71DTdubxtCfgHsSw87VJ8svBynFTwir0IW_yrm7jJ27jw6Vz0z0_v5Z9Uf3FX2E"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-16 px-margin-mobile md:px-lg rounded-t-[40px] mt-12 relative overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary-container to-primary opacity-50 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+<div class="space-y-6 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-on-primary text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-h1 text-h1 text-on-primary font-semibold tracking-tight">Memento</span>
+</div>
+<p class="font-body-md text-on-primary-container max-w-sm">Preserving the stories behind the objects we cherish. Your digital heirloom awaits.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-12 text-center sm:text-left">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">Product</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Features</a></li>
+<li><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Pricing</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md text-secondary-container uppercase tracking-wider">Company</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">About Us</a></li>
+<li><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-primary-container relative z-10 text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-caption text-caption text-on-primary-container">© 2024 Memento App. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-primary-container hover:text-on-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+</footer>
+</body></html>
